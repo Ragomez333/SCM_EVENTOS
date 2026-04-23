@@ -2,6 +2,14 @@
 
 API REST con **FastAPI** para crear y cancelar citas por horario. Usa **Redis** como bloqueo distribuido (evitar doble reserva), **SQLite** para persistencia y **RabbitMQ** para publicar eventos que consumen uno o más **workers** (notificación simulada y registro en log).
 
+# INTEGRANTES:
+
+Esteban Murillo Gomez
+Mauricio Lopez Campiño
+Rooger Andres Gomez
+Miguel Angel Villamil
+
+
 | Tecnología | Descripción |
 | :---: | :--- |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40" height="40" alt="FastAPI"/> | **FastAPI**: Framework web moderno y rápido para construir la API RESTful. |
