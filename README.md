@@ -2,6 +2,16 @@
 
 API REST con **FastAPI** para crear y cancelar citas por horario. Usa **Redis** como bloqueo distribuido (evitar doble reserva), **SQLite** para persistencia y **RabbitMQ** para publicar eventos que consumen uno o más **workers** (notificación simulada y registro en log).
 
+| Tecnología | Descripción |
+| :---: | :--- |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40" height="40" alt="FastAPI"/> | **FastAPI**: Framework web moderno y rápido para construir la API RESTful. |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python"/> | **Python 3**: Lenguaje de programación base del proyecto (usando `asyncio` para asincronía). |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" width="40" height="40" alt="Redis"/> | **Redis**: Utilizado como sistema de caché y mecanismo de *Distributed Locking* (Bloqueo Distribuido) para prevenir la concurrencia (doble reserva) en el mismo horario. |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" width="40" height="40" alt="RabbitMQ"/> | **RabbitMQ**: Message Broker (Cola de Mensajes) que recibe los eventos (`CITA_CREADA`, `CITA_CANCELADA`) y los distribuye a los workers para tareas en segundo plano. |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="40" height="40" alt="SQLite"/> | **SQLite**: Base de datos relacional ligera utilizada para persistir el estado final de las citas. |
+
+---
+
 ## Requisitos
 
 - Python 3.10+
